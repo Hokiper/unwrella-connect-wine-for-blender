@@ -2,7 +2,7 @@
 
 **UnwrellaConnect for Blender** is a free extension that enables the use of Unwrella-IO or Packer-IO directly from within Blender.
 
-All functionality is directly available from within Blender's UV editor and all iteraction between the programs happens transaprently in the background. Unwrap anything without any manual exporting and re-importing of objects.
+All functionality is directly available from within Blender's UV editor and all interaction between the programs happens transparently in the background. Unwrap anything without any manual exporting and re-importing of objects.
 
 ## Requirements
 The extension requires Blender version 4.2 or later.

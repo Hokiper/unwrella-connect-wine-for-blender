@@ -4,6 +4,8 @@
 
 All functionality is directly available from within Blender's UV editor and all interaction between the programs happens transparently in the background. Unwrap anything without any manual exporting and re-importing of objects.
 
+![UnwrellaConnect for Blender screenshot](https://docs.3d-plugin.com/images/unwrella-blender-bridge/unwrella-blender-UnwrellaConnect-title.png "UnwrellaConnect for Blender screenshot")
+
 ## Requirements
 The extension requires Blender version 4.2 or later.
 
@@ -25,3 +27,6 @@ To install the extension in Blender just drag and drop the downloaded archive fi
 ## Documentation
 You can find the full documentation for UnwrellaConnect here:
 https://docs.3d-plugin.com/unwrellaconnect-blender
+
+## See it in Action
+[![UnwrellaConnect video](https://img.youtube.com/vi/BiFyYPNrmDc/maxresdefault.jpg)](https://www.youtube.com/watch?v=BiFyYPNrmDc)

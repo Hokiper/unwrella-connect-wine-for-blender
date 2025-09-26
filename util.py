@@ -31,6 +31,9 @@ class Util:
       return Util.get_app_path_win()
     if (platform.system() == 'Darwin'):
       return Util.get_app_path_mac()
+    if (platform.system() == 'Linux'):
+      linux_values = Util.get_app_path_linux()
+      return ("wine", linux_values[0]), linux_values[1]
     return "", AppAccess.NONE
 
   def get_app_path_win():
@@ -64,6 +67,23 @@ class Util:
     if (os.path.isfile(path)):
       return path, AppAccess.PACKER_IO
     return path, AppAccess.NONE
+
+  def get_app_path_linux():
+    path = ""
+    prefs = bpy.context.preferences.addons[__package__].preferences
+    if (prefs):
+      path = prefs.dirpath
+    if (os.path.isfile(path + "/Unwrella-IO.exe")):
+      return path + "/Unwrella-IO.exe", AppAccess.UNWRELLA_IO
+    if (os.path.isfile(path + "/Packer-IO.exe")):
+      return path + "/Packer-IO.exe", AppAccess.PACKER_IO
+    path = os.getenv("HOME") + "/.wine/drive_c/Program Files/Unwrella-IO/Unwrella-IO.exe"
+    if (os.path.isfile(path)):
+      return path, AppAccess.UNWRELLA_IO
+    path = os.getenv("HOME") + "/.wine/drive_c/Program Files/Packer-IO/Packer-IO.exe"
+    if (os.path.isfile(path)):
+      return path, AppAccess.PACKER_IO
+    return "", AppAccess.NONE
 
   def get_path_from_registry(appName):
     try:

@@ -9,4 +9,4 @@ type = "add-on"
 version = "1.0.0"
 website = "https://docs.3d-plugin.com/unwrellaconnect-blender"
 tags = ["UV"]
-platforms = ["windows-x64", "macos-arm64", "macos-x64"]
+platforms = ["windows-x64", "macos-arm64", "macos-x64", "linux-x64"]

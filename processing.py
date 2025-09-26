@@ -80,8 +80,13 @@ class Processing:
     }
 
     try:
-      operator.process = subprocess.Popen([unwrellaParams["appPath"], 'connect'], stdin=subprocess.PIPE,
-        stdout=subprocess.PIPE, shell=False)
+      operator.process = subprocess.Popen(
+        (unwrellaParams["appPath"], 'connect')
+        if isinstance(unwrellaParams["appPath"], str)
+        else (*unwrellaParams["appPath"], 'connect'),
+        stdin=subprocess.PIPE,
+        stdout=subprocess.PIPE,
+        shell=False)
     except:
       msgStr = 'Unwrella-IO executable not found. Please refer to the Documentation for installation instructions.'
       self.update_status(operator, msgStr, "ERROR")

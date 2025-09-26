@@ -1,12 +1,12 @@
 blender_version_min = "4.2.0"
 id = "unwrellaio_connect"
 license = ["SPDX:MIT"]
-maintainer = "Boris Posavec"
-name = "UnwrellaConnect"
+maintainer = "Hokiper"
+name = "UnwrellaConnect Wine"
 schema_version = "1.0.0"
 tagline = "Connect to Unwrella-IO directly from Blender"
 type = "add-on"
 version = "1.0.0"
-website = "https://docs.3d-plugin.com/unwrellaconnect-blender"
+website = "https://github.com/Hokiper/unwrella-connect-wine-for-blender"
 tags = ["UV"]
 platforms = ["windows-x64", "macos-arm64", "macos-x64", "linux-x64"]
